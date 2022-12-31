@@ -433,58 +433,77 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <p>Zostaw swoje dane w formularzu poniżej</p>
-        <form class="modal-form">
-          <label role="group" aria-labelledby="username-elements">
-            <span for="username"> Imię </span>
-            <input type="text" name="username" id="surename" />
-            <svg width="18" height="18">
-              <use href="./images/icons.svg#icon-person-form"></use>
-            </svg>
-          </label>
-          <label role="group" aria-labelledby="phone-number-elements">
-            <span for="phone-number"> Telefon </span>
-            <input type="text" name="phone" id="phone-number" />
-            <svg width="18" height="18">
-              <use href="./images/icons.svg#icon-phone-form"></use>
-            </svg>
-          </label>
-          <label role="group" aria-labelledby="email-elements">
-            <span for="user_email"> Email </span>
-            <input type="text" name="email" id="user_email" />
-            <svg width="18" height="18">
-              <use href="./images/icons.svg#icon-email-form"></use>
-            </svg>
-          </label>
-          <label role="group" aria-labelledby="comment-elements">
-            <span for="comment"> Komentarz </span>
-            <textarea
-              name="comment"
-              rows="5"
-              placeholder="Wprowadź tekst"
-              id="comment"
-            ></textarea>
-          </label>
-        </form>
-        <div class="checkbox">
-          <input type="checkbox" name="terms" value="accepted" id="cb" />
-          <label for="cb">
-            <svg width="16" height="15">
-              <use href="./images/icons.svg#icon-accept-form2"></use>
-            </svg>
-          </label>
-          <div class="private">
-            Oświadczam iż akceptuję <a href="#">Regulamin</a> i
-            <a href="#">Politykę Prywatności</a>.
-          </div>
-        </div>
-        <button class="submit-button" type="submit">Wyślij</button>
-
         <button class="modal-close" data-modal-close>
           <svg width="11px" height="11px">
             <use href="images/icons.svg#icon-cross"></use>
           </svg>
         </button>
+        <h4 class="form-title">Zostaw swoje dane w formularzu poniżej</h4>
+        <form name="users_details_form" autocomplete="on" novalidate>
+          <div class="form-list-element">
+            <label for="user_name" role="group">
+              Imię
+              <svg width="18" height="18">
+                <use href="./images/icons.svg#icon-person-form"></use>
+              </svg>
+              <input type="text" name="username" id="user_name" />
+            </label>
+          </div>
+          <div class="form-list-element">
+            <label for="user_phone" role="group">
+              Telefon
+              <svg width="18" height="18">
+                <use href="./images/icons.svg#icon-phone-form"></use>
+              </svg>
+              <input type="tel" name="phone" id="user_phone" />
+            </label>
+          </div>
+          <div class="form-list-element">
+            <label for="user_email" role="group">
+              Email
+              <svg width="18" height="18">
+                <use href="./images/icons.svg#icon-email-form"></use>
+              </svg>
+              <input type="email" name="email" id="user_email" />
+            </label>
+          </div>
+          <div class="form-list-element">
+            <label
+              for="user_comment"
+              role="group"
+              aria-labelledby="comment-elements"
+            >
+              Komentarz
+            </label>
+            <textarea
+              name="comment"
+              rows="5"
+              placeholder="Wprowadź tekst"
+              id="user_comment"
+            ></textarea>
+          </div>
+
+          <div class="checkbox">
+            <label for="user_declaration">
+              <input
+                type="checkbox"
+                name="term"
+                value="accepted"
+                id="user_declaration"
+              />
+              <div class="custom-checkbox">
+                <svg width="16" height="15">
+                  <use href="./images/icons.svg#icon-accept-form2"></use>
+                </svg>
+              </div>
+              <span>
+                Oświadczam iż akceptuję <a href="#">Regulamin</a> i
+                <a href="#">Politykę Prywatności</a>.
+              </span>
+            </label>
+          </div>
+          <button class="submit-button" type="submit">Wyślij</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
