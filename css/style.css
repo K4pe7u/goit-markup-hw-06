@@ -704,10 +704,13 @@ ul {
   padding-left: 42px;
   outline: none;
 }
-.modal-form input:focus {
-  border-color: #2196f3;
+.modal-form input:focus-within {
+  border-color: var(--color2);
 }
 
+.modal-form textarea:focus-within {
+  border-color: var(--color2);
+}
 .modal-form span {
   font-size: 12px;
   line-height: 1.16;
@@ -733,6 +736,9 @@ ul {
   left: 55px;
   fill: var(--color1);
   pointer-events: none;
+}
+.modal-form svg:focus {
+  fill: #2196f3;
 }
 .checkbox {
   color: var(--color3);
